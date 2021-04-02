@@ -143,7 +143,7 @@ a {
 
 .hero {
 	display: flex;
-	height: 88vh;
+	min-height: 88vh;
 }
 
 main {
@@ -183,9 +183,9 @@ main .cta {
 
 .hero-image {
 	position: absolute;
-	top: -25%;
-	right: -6%;
-	/* z-index: -1; */
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
 }
 
 .why-us {
@@ -351,14 +351,71 @@ footer {
 	}
 }
 
-@media only screen and (max-width: 800px) {
-	.hero {
-		border: 1px solid red;
-		flex-direction: column-reverse;
+@media only screen and (max-width: 780px) {
+	.latest-articles {
+		padding: 2em 0;
 	}
-	.hero-image {
-		width: 600px;
-		height: 600px;
-		position: static;
+
+	.why-us {
+		padding: 2em 0;
+	}
+
+	.section-title {
+		text-align: center;
+	}
+
+	.articles {
+		flex-direction: column;
+	}
+
+	.section-content,
+	.articles article {
+		width: 100%;
+		text-align: center;
+	}
+
+	.articles article {
+		margin-bottom: 3em;
+	}
+
+	.cards {
+		flex-direction: column;
+	}
+
+	.card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-right: 0;
+		margin-bottom: 2em;
+	}
+
+	.card:last-child {
+		margin-bottom: 0;
+	}
+
+	.card-content {
+		text-align: center;
+	}
+
+	.footer-container {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.logo {
+		margin: 1em 0;
+	}
+
+	.bottom-navbar {
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.attribution-wrapper {
+		align-items: center;
 	}
 }
