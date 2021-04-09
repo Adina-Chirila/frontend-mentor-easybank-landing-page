@@ -86,6 +86,8 @@ header {
 
 .close-btn {
 	display: none;
+	cursor: pointer;
+	animation: grow 0.3s ease-in-out;
 }
 
 ul {
@@ -98,6 +100,7 @@ a {
 
 .burger {
 	display: none;
+	animation: grow 0.3s ease-in-out;
 }
 
 .burger:hover {
@@ -300,14 +303,6 @@ footer {
 	justify-content: space-around;
 }
 
-/* .bottom-navbar {
-	width: 100%;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	margin: 1.5em 0;
-} */
-
 .social-media-navbar,
 .bottom-navbar ul {
 	display: flex;
@@ -400,6 +395,7 @@ footer {
 		position: fixed;
 		z-index: 2;
 		cursor: pointer;
+		transition: all 1s ease-in-out;
 	}
 
 	.burger {
@@ -434,14 +430,7 @@ footer {
 
 	.navbar-list.visible {
 		display: flex;
-	}
-
-	.close-btn {
-		display: none;
-		position: absolute;
-		top: 1.5em;
-		right: 0.2em;
-		cursor: pointer;
+		animation: grow 0.5s ease-in-out;
 	}
 
 	.close-btn.visible,
@@ -589,5 +578,22 @@ footer {
 @media only screen and (max-width: 375px) {
 	.hero-image-wrapper {
 		background: url("./images/bg-intro-mobile.svg") no-repeat;
+	}
+}
+
+/* animations */
+@keyframes grow {
+	0% {
+		display: none;
+		opacity: 0;
+	}
+	1% {
+		display: block;
+		opacity: 0;
+		transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
 	}
 }
