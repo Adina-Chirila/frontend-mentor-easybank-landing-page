@@ -259,6 +259,20 @@ main .cta {
 	border-radius: 0.3em;
 	overflow: hidden;
 	box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+	transition: all 0.2s ease-in-out;
+}
+
+.articles article:hover {
+	cursor: pointer;
+	transform: scale(1.01);
+}
+
+.articles article:hover .article-img {
+	filter: brightness(70%);
+}
+
+.articles article:hover .article-title {
+	color: #33daa2;
 }
 
 .article-img {
@@ -345,7 +359,6 @@ footer {
 
 .social-media-navbar i:hover,
 .bottom-navbar ul li a:hover,
-.article-title:hover,
 .attribution a:hover {
 	color: #33daa2;
 	cursor: pointer;
